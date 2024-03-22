@@ -1,0 +1,61 @@
+# Ideas for my portfolio
+
+- Full width navbar with logo
+  - Logo must be a "t" with surrounded by something i guess? It's minimalistic anyway.
+  - Logo on the left
+  - Navigation on the right
+  - It hides when you scroll down and shows when you scroll up
+  - It should start that hiding functionality only after we pass the first screen
+  - In the first screen it doesn't have a bottom shadow/border
+  - It must have a indicator of which section we are currently viewing
+  - Smooth scrolling when you click on a section (but not when manually scrolling the site)
+  - For small screen sizes:
+    - Two small buttons one to toggle language and one to toggle theme
+  - Logo
+    - When clicking once it gets rotated by 40 degrees like it's hanging
+    - Clicking another time will make it fall down
+    - Logo will come back on refresh
+- Screens:
+  - It will take 100 view height for each screen (?)
+  - It will have a heading
+  - First screen - Home:
+    - My name
+    - Software engineer
+    - Big letters
+    - Some simple animation
+    - A very subtle container with a download link for my CV, LinkedIn and Github links
+    - Two very blurred circles on the background
+      - Tile/grainy blur
+  - Second screen - About me:
+    - Some cool description about me and then a small list of technologies I use
+    - Sliding from left to right animation for each item in the list
+  - Third screen - Projects:
+    - Projects:
+      - Scriptorium
+      - Chronotune
+      - nIRC
+      - EmojiGuesser
+    - There should be a grid of two columns for normal screen sizes and one column for phones and tablets
+    - Each project will be like a rectangle and in one side it will have the title, description and tags on the bottom, and the other side will have an image of it, when you hover over that rectangle, the image will rotate a bit and scale slightly. It will alternate sides. Even item index will have text on left and image on right, odd will be opposite. It must be just a short description of what it is.
+    - Two small icons after the project title, an paper clip and a github icon. Maybe if enough space there could be icon and "View site" & "Source code" text.
+  - Fourth screen - Contact Me:
+  - An short subheading telling the user to contact me and put a "mailto" anchor link somewhere in the text
+    - "You can get in contact with me by submitting the form below or <link>clicking here to send me an email directly</link>"
+  - An contact form
+    - Your email
+    - Message
+    - Send button
+  - It will send to my email, ill configure it later
+- Sides (large screens):
+  - Left:
+    - GitHub profile
+    - LinkedIn profile
+  - Right:
+    - Language switcher (BR and US)
+    - Light theme toggler
+- Look:
+  - Theme:
+    - Starts on dark
+    - Slate and emerald
+  - Font:
+    - Ubuntu and Ubuntu Mono
