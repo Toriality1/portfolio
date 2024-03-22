@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.title {
+  font-family: var(--font-ubuntu-mono);
+}
+
+body {
+  color: theme(textColor.slate.500);
+}
+
+a:hover {
+  color: theme(colors.emerald.500);
+  transition: 200ms ease-in-out;
+  scale: 1.1;
+}
