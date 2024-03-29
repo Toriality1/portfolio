@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
-import { Ubuntu, Ubuntu_Mono } from "next/font/google";
+import {
+  Ubuntu as main_font_name,
+  Ubuntu_Mono as title_font_name,
+} from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
-import { Header } from "./components/Header";
+import { Header } from "@/features/Header";
 
-const ubuntu = Ubuntu({
+const main_font = main_font_name({
   subsets: ["latin"],
   weight: ["400", "700"],
-  variable: "--font-ubuntu",
+  variable: "--font-main",
 });
-const ubuntu_mono = Ubuntu_Mono({
+const title_font = title_font_name({
   subsets: ["latin"],
-  variable: "--font-ubuntu-mono",
-  weight: ["400"],
+  weight: ["400", "700"],
+  variable: "--font-title",
 });
 
 export const metadata: Metadata = {
@@ -29,17 +32,13 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={twMerge(
-          ubuntu.variable,
-          ubuntu_mono.variable,
-          "bg-slate-950 overflow-x-hidden"
+          main_font.variable,
+          title_font.variable,
+          "bg-gray-200",
         )}
       >
-        {/*  TODO: Improve*/}
-        {/* <div className="bg-emerald-600 absolute top-0 left-[40rem] h-[30rem] w-[50rem] rounded-full blur-[10rem] opacity-30" />
-        <div className="bg-slate-500 absolute top-0 right-[40rem] h-[30rem] w-[50rem] rounded-full blur-[10rem] opacity-30" /> */}
-
         <Header />
-        {children}
+        {/* {children} */}
       </body>
     </html>
   );

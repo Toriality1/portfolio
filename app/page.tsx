@@ -1,11 +1,14 @@
-import { AboutMe } from "./components/AboutMe";
-import { Home } from "./components/Home";
+import { AboutMe } from "@/features/AboutMe";
+import { Home } from "@/features/Home";
+import { Projects } from "@/features/Projects";
+import { useRouter } from "next/router";
 
 export default function HomePage() {
   return (
-    <main className="px-40 flex flex-col justify-center items-center">
+    <main className="flex flex-col items-center justify-center">
       <Home />
       <AboutMe />
+      <Projects />
     </main>
   );
 }
