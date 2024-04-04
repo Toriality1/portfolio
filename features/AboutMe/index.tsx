@@ -3,39 +3,19 @@
 import { Section } from "@/components/Section";
 import { SectionHeader } from "@/components/SectionHeader";
 import { FaRegDotCircle } from "react-icons/fa";
+import { Title } from "./components/Title";
+import { Info } from "./components/Info";
 
 export const AboutMe = () => {
   return (
-    <Section>
-      <Section.Header>About Me</Section.Header>
-      {/* TODO */}
-
-      <div className="flex items-start justify-between">
-        <div className="w-[70ch] space-y-8 leading-8">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-            quaerat omnis quia fugit, fuga aperiam corporis modi sunt optio
-            dolores earum vitae! Quasi deleniti ducimus, minus inventore ad quam
-            aliquam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
-            quaerat omnis quia fugit, fuga aperiam corporis modi sunt optio
-            dolores earum vitae! Quasi deleniti ducimus, minus inventore ad quam
-            aliquam.
-          </p>
-        </div>
-        <ul className="grid grid-cols-3 gap-4 gap-x-12 p-2.5 text-xs">
-          {technologies_data.map((item) => (
-            <li key={item}>
-              <p className="flex items-center gap-3">
-                <FaRegDotCircle className="text-emerald-500" size={8} />
-                {item}
-              </p>
-            </li>
-          ))}
-        </ul>
+    <Section color="bg-gradient-to-b from-main from-95% to-main-darker">
+      <div className="space-y-20">
+        <Title />
+        <Info />
       </div>
+      <p className="mt-10 text-center font-extralight text-accent opacity-50">
+        Be the change you want to see in the world
+      </p>
     </Section>
   );
 };

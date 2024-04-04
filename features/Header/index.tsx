@@ -10,7 +10,7 @@ export const Header = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="title fixed flex w-full items-center justify-between bg-red-100 px-32 py-4"
+      className="title fixed flex w-full items-center justify-between px-32 py-4"
     >
       <div className="flex items-center gap-24">
         <Logo />

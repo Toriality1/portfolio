@@ -9,13 +9,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundColor: (theme) => ({
+      colors: {
         main: "#222831",
-        secondary: "#EDCBB1",
+        "main-darker": "#12151A",
+        secondary: "#425F61",
         "button-main": "#FF7477",
         "button-secondary": "#5FE083",
         accent: "#76ABAE",
-      }),
+        "accent-darker": "#2B3E3F",
+      },
     },
   },
   plugins: [],

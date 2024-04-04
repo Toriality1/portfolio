@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import {
-  Ubuntu as main_font_name,
-  Ubuntu_Mono as title_font_name,
+  Roboto as main_font_name,
+  Teko as title_font_name,
+  // Staarliches
+  // Mate_SC
 } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import { Header } from "@/features/Header";
+
+import { cookies } from "next/headers";
 
 const main_font = main_font_name({
   subsets: ["latin"],
@@ -14,7 +18,7 @@ const main_font = main_font_name({
 });
 const title_font = title_font_name({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400"],
   variable: "--font-title",
 });
 
@@ -23,7 +27,15 @@ export const metadata: Metadata = {
   description: "TODO", // TODO
 };
 
-export default function RootLayout({
+async function getData() {
+  const cookieStore = cookies();
+
+  return {
+    cookieValue: cookieStore,
+  };
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -38,7 +50,7 @@ export default function RootLayout({
         )}
       >
         <Header />
-        {/* {children} */}
+        {children}
       </body>
     </html>
   );

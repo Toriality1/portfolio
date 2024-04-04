@@ -12,13 +12,7 @@ html {
 }
 
 body {
-  color: theme(textColor.slate.500);
-}
-
-a:hover {
-  color: theme(colors.emerald.500);
-  transition: 200ms ease-in-out;
-  scale: 1.1;
+  color: theme(textColor.gray.300);
 }
 
 .animation-container {

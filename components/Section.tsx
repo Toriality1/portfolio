@@ -4,21 +4,17 @@ import { twMerge } from "tailwind-merge";
 
 type SectionProps = {
   children: React.ReactNode;
+  color?: string;
   className?: string;
 };
 
-const Section = ({ children, className }: SectionProps) => {
+const Section = ({ children, color, className }: SectionProps) => {
   return (
-    <motion.section
-      initial={{ y: 100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      className={twMerge(
-        "flex flex-col min-h-screen w-full max-w-screen-xl px-4 py-12",
-        className
-      )}
-    >
-      {children}
-    </motion.section>
+    <div className={twMerge("px-32 py-20", color)}>
+      <section className={twMerge("m-auto max-w-screen-lg", className)}>
+        {children}
+      </section>
+    </div>
   );
 };
 
