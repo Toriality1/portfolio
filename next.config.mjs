@@ -28,6 +28,9 @@ const nextConfig = {
     locales: ["en", "fr"],
     defaultLocale: "en",
   },
+  experimental: {
+    serverActions: true,
+  },
 };
 
 export default nextConfig;

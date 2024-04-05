@@ -10,6 +10,7 @@ import { twMerge } from "tailwind-merge";
 import { Header } from "@/features/Header";
 
 import { cookies } from "next/headers";
+import { ActiveSectionProvider } from "@/features/Header/context/ActiveSection";
 
 const main_font = main_font_name({
   subsets: ["latin"],
@@ -49,8 +50,10 @@ export default async function RootLayout({
           "bg-gray-200",
         )}
       >
-        <Header />
-        {children}
+        <ActiveSectionProvider>
+          <Header />
+          {children}
+        </ActiveSectionProvider>
       </body>
     </html>
   );

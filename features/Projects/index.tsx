@@ -1,11 +1,17 @@
 import { projects_data } from "@/data/projects";
 import { Section } from "@/components/Section";
 import { Project } from "./components/Project";
+import { SectionHeader } from "@/components/SectionHeader";
 
 export const Projects = () => {
   return (
-    <Section color="bg-main-darker" className="space-y-16">
-      <Section.Header>My Projects</Section.Header>
+    <Section
+      color="bg-main-darker"
+      className="space-y-16"
+      id="Projects"
+      threshold={0.2}
+    >
+      <SectionHeader>My Projects</SectionHeader>
       <div className="space-y-10">
         {projects_data.map((project, i) => (
           <div key={project.for} className="pt-2 text-accent">

@@ -8,7 +8,10 @@ import { Info } from "./components/Info";
 
 export const AboutMe = () => {
   return (
-    <Section color="bg-gradient-to-b from-main from-95% to-main-darker">
+    <Section
+      color="bg-gradient-to-b from-main from-95% to-main-darker"
+      id="About"
+    >
       <div className="space-y-20">
         <Title />
         <Info />

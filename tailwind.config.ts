@@ -14,7 +14,7 @@ const config: Config = {
         "main-darker": "#12151A",
         secondary: "#425F61",
         "button-main": "#FF7477",
-        "button-secondary": "#5FE083",
+        "button-link": "#5FE083",
         accent: "#76ABAE",
         "accent-darker": "#2B3E3F",
       },
