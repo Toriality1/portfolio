@@ -15,6 +15,10 @@ body {
   color: theme(textColor.gray.300);
 }
 
+strong {
+  color: theme(colors.accent);
+}
+
 .animation-container {
   position: absolute;
   height: 100%;

@@ -10,7 +10,7 @@ type SectionProps = {
 
 const Section = ({ children, color, className }: SectionProps) => {
   return (
-    <div className={twMerge("px-32 py-20", color)}>
+    <div className={twMerge("px-6 py-20", color)}>
       <section className={twMerge("m-auto max-w-screen-lg", className)}>
         {children}
       </section>

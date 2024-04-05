@@ -14,7 +14,7 @@ export const Projects = () => {
               <div className="h-[1px] grow bg-accent opacity-20" />
             </div>
             <div className="py-4">
-              <ul className="flex flex-wrap ">
+              <ul className="flex flex-col sm:flex-row sm:flex-wrap ">
                 {project.data.map((p) => (
                   <Project key={p.title} {...p} />
                 ))}
