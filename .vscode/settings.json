@@ -12,5 +12,10 @@
         "Sqlite",
         "tailwindcss",
         "Toriality's"
-    ]
+    ],
+    "i18n-ally.localesPaths": [
+        "messages",
+        "public/locales"
+    ],
+    "i18n-ally.keystyle": "nested"
 }

@@ -1,7 +1,9 @@
 import { FaFilePdf } from "react-icons/fa";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export const ResumeLink = () => {
+  const t = useTranslations("About");
   return (
     <Link
       href={"#"}
@@ -9,7 +11,7 @@ export const ResumeLink = () => {
     >
       <p className="title flex items-center gap-2 bg-button-main px-4 py-2 text-lg font-bold uppercase tracking-wide text-white transition group-hover:bg-white group-hover:text-button-main">
         <FaFilePdf className="mb-0.5" />
-        View Resume
+        {t("resume")}
       </p>
     </Link>
   );

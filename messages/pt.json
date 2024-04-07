@@ -1,0 +1,42 @@
+{
+  "About": {
+    "quote": "Seja a mudança que deseja ver no mundo",
+    "title": "Bem-vindo ao meu portfolio, eu sou",
+    "roles": {
+      "0": "Engenheiro de Software",
+      "1": "Desenvolvedor Full-Stack",
+      "2": "Entusiasta de React.js",
+      "3": "Estudante de UI/UX"
+    },
+    "about": "Sobre mim...",
+    "p1": "<strong>Desenvolvedor Fullstack</strong> detalhista com 4 anos de experiência em tecnologias web com uma abordagem eficaz e criativa para cada projeto. \nDesde 2019, venho desenvolvendo e contribuindo com aplicativos, sites e jogos de código aberto.",
+    "p2": "Proficiente em frameworks e bibliotecas Front-end como <strong>React.js, Next.js e Tailwind.</strong> Também tenho experiência com tecnologias Back-end como <strong>Node.js, Express.js< \n/strong> e bancos de dados relacionais e não relacionais.",
+    "resume": "Ver currículo"
+  },
+  "Contact": {
+    "email": "Digite seu e-mail",
+    "message": "Digite sua mensagem",
+    "send": "Enviar mensagem",
+    "sending": "Enviando...",
+    "title": "Entrar em contato",
+    "alert": "Obrigado por enviar a sua mensagem"
+  },
+  "Header": {
+    "About": "Sobre",
+    "Contact": "Contato",
+    "Projects": "Projetos"
+  },
+  "Projects": {
+    "Chronotune": "Chronotune é um web game divertido e viciante onde você terá que adivinhar a data de lançamento de músicas aleatórias do banco de dados do Spotify",
+    "Cool Space Shooter": "Esse é o meu primeiro jogo. \nÉ um jogo simples de tiro espacial. \nUse o mouse para mover a nave, clique para atirar e use a barra de espaço para reiniciar o jogo após a tela de game over.",
+    "DYOM Bingo": "DYOM Bingo é um jogo de bingo feito para DYOM, um mod para GTA San Andreas.",
+    "EmojiGuesser": "EmojiGuesser é um jogo simples e divertido onde você tem a tarefa de adivinhar o nome de um emoji ou qual emoji representa uma determinada palavra.",
+    "HexGuesser": "HexGuesser é um jogo simples e divertido onde você tem a tarefa de adivinhar o código hexadecimal de cores aleatórias geradas infinitamente.",
+    "PopPidgeon": "PopPidgeon é um jogo de plataforma simples cujo objetivo é estourar todas as bolhas da tela, evitando colidir com elas.",
+    "Scriptorium": "Scriptorium é um aplicativo de desktop do Windows que permite criar testes e questionários para o que você quiser.",
+    "nIRC": "Um site de sala de bate-papo público muito simples.",
+    "source": "Código fonte",
+    "title": "Meus projetos",
+    "visit": "Visite o projeto"
+  }
+}

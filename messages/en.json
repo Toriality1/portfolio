@@ -1,0 +1,42 @@
+{
+  "Header": {
+    "About": "About",
+    "Projects": "Projects",
+    "Contact": "Contact"
+  },
+  "About": {
+    "quote": "Be the change you want to see in the world",
+    "title": "Welcome to my portfolio, I am",
+    "roles": {
+      "0": "Software Engineer",
+      "1": "Full-Stack Developer",
+      "2": "React.js Enthusiast",
+      "3": "UI/UX Design Student"
+    },
+    "p1": "Detail-oriented <strong>Fullstack Developer</strong> with 4+ years of experience in web technologies with a effective and creative approach for every project. Since 2019, I have been developing and contributing to open-source applications, websites and games.",
+    "p2": "Proficient in Front-end frameworks and libraries such as <strong>React.js, Next.js, and Tailwind.</strong> I also have experience with Back-end technologies such as <strong>Node.js, Express.js</strong>, and both relational and non-relational databases.",
+    "resume": "View resume",
+    "about": "About me..."
+  },
+  "Projects": {
+    "title": "My Projects",
+    "Chronotune": "Chronotune is a fun and addicting web game where you have to guess the release date of random songs from Spotify's database",
+    "EmojiGuesser": "EmojiGuesser is a simple cool game where you are tasked with guessing the name of an emoji or which emoji represents a certain word.",
+    "HexGuesser": "HexGuesser is a simple and silly fun game where you are tasked with guessing the hex code of endlessly generated random colors.",
+    "DYOM Bingo": "DYOM Bingo is a bingo game made for DYOM, a mod for GTA San Andreas.",
+    "nIRC": "A very simple public chat-room website.",
+    "Scriptorium": "Scriptorium is a Windows desktop application that lets you create tests and quizzes for anything you want.",
+    "PopPidgeon": "PopPidgeon is a simple platform game that you goal is to pop all the bubbles on the screen, while avoiding colliding with it.",
+    "Cool Space Shooter": "That's my first game ever. It's a simple space shooter game. Use the mouse to move the ship, click to shoot and use spacebar to restart the game after game over screen.",
+    "visit": "Visit project",
+    "source": "Source code"
+  },
+  "Contact": {
+    "title": "Get in touch",
+    "email": "Enter your email",
+    "message": "Enter your message",
+    "send": "Send message",
+    "sending": "Sending...",
+    "alert": "Thanks for sending your message"
+  }
+}

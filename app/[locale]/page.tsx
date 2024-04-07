@@ -4,7 +4,7 @@ import { Contact } from "@/features/Contact";
 
 export default async function HomePage() {
   return (
-    <main className="">
+    <main>
       <AboutMe />
       <Projects />
       <Contact />

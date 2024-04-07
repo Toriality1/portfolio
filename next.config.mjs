@@ -1,3 +1,7 @@
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -23,14 +27,14 @@ const nextConfig = {
 
     return config;
   },
-  i18n: {
-    localeDetection: false,
-    locales: ["en", "fr"],
-    defaultLocale: "en",
-  },
+  // i18n: {
+  //   localeDetection: false,
+  //   locales: ["en", "fr"],
+  //   defaultLocale: "en",
+  // },
   experimental: {
     serverActions: true,
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

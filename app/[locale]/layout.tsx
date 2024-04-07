@@ -11,6 +11,7 @@ import { Header } from "@/features/Header";
 
 import { cookies } from "next/headers";
 import { ActiveSectionProvider } from "@/features/Header/context/ActiveSection";
+import { useTranslations } from "next-intl";
 
 const main_font = main_font_name({
   subsets: ["latin"],
@@ -36,13 +37,17 @@ async function getData() {
   };
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
+  const t = useTranslations("Header");
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body
         className={twMerge(
           main_font.variable,
@@ -51,7 +56,14 @@ export default async function RootLayout({
         )}
       >
         <ActiveSectionProvider>
-          <Header />
+          <Header
+            locale={locale}
+            names={{
+              About: t("About"),
+              Projects: t("Projects"),
+              Contact: t("Contact"),
+            }}
+          />
           {children}
         </ActiveSectionProvider>
       </body>

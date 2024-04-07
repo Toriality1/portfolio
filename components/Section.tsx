@@ -30,9 +30,11 @@ const Section = ({
   const { setActiveSection, timeOfLastClick, setTimeOfLastClick } =
     useActiveSection();
 
-  onwheel = () => {
-    setTimeOfLastClick(0);
-  };
+  if (typeof window !== "undefined") {
+    onwheel = () => {
+      setTimeOfLastClick(0);
+    };
+  }
 
   useEffect(() => {
     if (inView && Date.now() - timeOfLastClick > 1000) {
