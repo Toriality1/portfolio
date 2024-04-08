@@ -34,7 +34,7 @@ export const Form = ({
           maxLength={255}
           name="email"
           type="email"
-          placeholder="Enter your email"
+          placeholder={email}
           className="grow outline-none group-focus-within:text-black"
         />
       </div>
@@ -44,12 +44,12 @@ export const Form = ({
           name="message"
           required
           maxLength={1000}
-          placeholder="Enter your message"
+          placeholder={message}
           className="grow resize-none outline-none group-focus-within:text-black"
           rows={10}
         ></textarea>
       </div>
-      <Submit />
+      <Submit send_msg={send_msg} sending={sending} />
     </form>
   );
 };

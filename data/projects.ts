@@ -34,7 +34,7 @@ const websites_data = [
 const softwares_data = [
   {
     title: "Scriptorium",
-    href: "",
+    href: "https://github.com/Toriality/scriptorium",
     source: "https://github.com/toriality/scriptorium",
     image: "/scriptorium.png",
   },
@@ -43,13 +43,13 @@ const softwares_data = [
 const games_data = [
   {
     title: "PopPidgeon",
-    href: "",
+    href: "https://torialitydev.itch.io/poppidgeon",
     source: "https://github.com/toriality/poppidgeon",
     image: "/poppidgeon.png",
   },
   {
     title: "Cool Space Shooter",
-    href: "",
+    href: "https://torialitydev.itch.io/cool-space-shooter",
     source: "https://github.com/toriality/cool-space-shooter",
     image: "/cool-space-shooter.png",
   },
