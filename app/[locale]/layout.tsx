@@ -26,7 +26,7 @@ const title_font = title_font_name({
 
 export const metadata: Metadata = {
   title: "Pedro Crelier | Software Engineer",
-  description: "TODO", // TODO
+  description: "💜 Be the change you want to see in the world 💚",
 };
 
 async function getData() {
