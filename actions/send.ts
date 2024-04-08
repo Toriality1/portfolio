@@ -11,6 +11,7 @@ export const send = async (formData: FormData) => {
   if (!email || !message) {
     return { error: "Email and message are required" };
   }
+
   if (typeof email !== "string" || typeof message !== "string") {
     return { error: "Email and message must be a string" };
   }
