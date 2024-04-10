@@ -35,7 +35,7 @@ const softwares_data = [
   {
     title: "Scriptorium",
     href: "https://github.com/Toriality/scriptorium",
-    source: "https://github.com/toriality/scriptorium",
+    source: "https://github.com/Toriality/scriptorium/releases/tag/release",
     image: "/scriptorium.png",
   },
 ];
