@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const SocialIcons = () => {
   return (
-    <div className="text-button-link flex gap-8 text-2xl md:gap-4 md:text-xl">
+    <div className="flex gap-8 text-2xl text-button-link md:gap-4 md:text-xl">
       <Tooltip text="Github">
         <Link
           href={"https://github.com/toriality"}
@@ -16,7 +16,7 @@ export const SocialIcons = () => {
       </Tooltip>
       <Tooltip text="Linkedin">
         <Link
-          href={"https://linkedin.com/in/toriality"}
+          href={"https://linkedin.com/in/pedro-crelier"}
           target="_blank"
           className="hover:text-white"
         >
