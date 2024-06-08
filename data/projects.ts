@@ -29,6 +29,12 @@ const websites_data = [
     source: "https://github.com/toriality/nirc",
     image: "/nirc.png",
   },
+  {
+    title: "Blog",
+    href: "https://toriality-blog.vercel.app",
+    source: "https://toriality-blog.vercel.app",
+    image: "/blog.png",
+  },
 ];
 
 const softwares_data = [
