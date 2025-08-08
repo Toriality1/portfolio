@@ -21,7 +21,7 @@ export const Form = ({
 }: FormProps) => {
   return (
     <form
-      className="m-auto flex max-w-[80ch] flex-col gap-4 text-accent"
+      className="flex-1 flex max-w-[80ch] flex-col gap-4 text-accent"
       action={async (formData) => {
         await send(formData);
         alert(alert_msg);
