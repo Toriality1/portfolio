@@ -27,14 +27,6 @@ const nextConfig = {
 
     return config;
   },
-  // i18n: {
-  //   localeDetection: false,
-  //   locales: ["en", "fr"],
-  //   defaultLocale: "en",
-  // },
-  experimental: {
-    serverActions: true,
-  },
 };
 
 export default withNextIntl(nextConfig);
