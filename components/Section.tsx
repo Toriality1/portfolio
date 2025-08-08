@@ -1,13 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView as useMotionInView } from "framer-motion";
 import { twMerge } from "tailwind-merge";
-import { useInView } from "react-intersection-observer";
+import { useInView as useObserverInView } from "react-intersection-observer";
+import { useEffect, useCallback, useRef } from "react";
+
 import {
   SectionName,
   useActiveSection,
 } from "@/features/Header/context/ActiveSection";
-import { useEffect } from "react";
 
 type SectionProps = {
   children: React.ReactNode;
@@ -24,30 +25,47 @@ const Section = ({
   id,
   threshold,
 }: SectionProps) => {
-  const { ref, inView } = useInView({
-    threshold: threshold ?? 0.5,
-  });
   const { setActiveSection, timeOfLastClick, setTimeOfLastClick } =
     useActiveSection();
 
-  if (typeof window !== "undefined") {
-    onwheel = () => {
-      setTimeOfLastClick(0);
-    };
-  }
+  const animationRef = useRef<HTMLElement | null>(null);
+
+  const isVisible = useMotionInView(animationRef, {
+    once: true,
+    amount: 0.15,
+  });
+
+  const { ref: observerRef, inView } = useObserverInView({
+    threshold: threshold ?? 0.5,
+  });
+
+  const setRefs = useCallback(
+    (node: HTMLElement | null) => {
+      observerRef(node); // react-intersection-observer
+      animationRef.current = node; // local ref for framer-motion
+    },
+    [observerRef],
+  );
+
+  useEffect(() => {
+    const resetClickTime = () => setTimeOfLastClick(0);
+    window.addEventListener("wheel", resetClickTime);
+    return () => window.removeEventListener("wheel", resetClickTime);
+  }, [setTimeOfLastClick]);
 
   useEffect(() => {
     if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection(id);
     }
-  }, [id, inView, setActiveSection, timeOfLastClick]);
+  }, [inView, id, setActiveSection, timeOfLastClick]);
 
   return (
     <div className={twMerge("px-6 py-20", color)}>
       <motion.section
-        ref={ref}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        ref={setRefs}
+        initial={{ opacity: 0, y: 30 }}
+        animate={isVisible ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6 }}
         className={twMerge("m-auto max-w-screen-lg", className)}
         id={id}
       >
@@ -58,3 +76,4 @@ const Section = ({
 };
 
 export { Section };
+
