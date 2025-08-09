@@ -23,8 +23,8 @@ export const Form = ({
     <form
       className="flex-1 flex max-w-[80ch] flex-col gap-4 text-accent"
       action={async (formData) => {
-        await send(formData);
-        alert(alert_msg);
+        const _alert = await send(formData);
+        alert(_alert);
       }}
     >
       <div className="group flex w-full items-center gap-4 rounded-sm p-4 ring-1 ring-accent/50 focus-within:ring-accent/100">

@@ -1,12 +1,8 @@
 "use server";
 
-import { Resend } from "resend";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
-export const send = async (formData: FormData) => {
-  const email = formData.get("email");
-  const message = formData.get("message");
+export async function send(formData: FormData) {
+  const email = formData.get("email") as string;
+  const message = formData.get("message") as string;
 
   if (!email || !message) {
     return { error: "Email and message are required" };
@@ -16,23 +12,15 @@ export const send = async (formData: FormData) => {
     return { error: "Email and message must be a string" };
   }
 
-  try {
-    resend.emails.send({
-      from: "onboarding@resend.dev",
-      to: "pcrelier@hotmail.com",
-      subject: "Message from portfolio",
-      reply_to: email,
-      text: message,
-    });
-  } catch (error) {
-    if (error instanceof Error) {
-      return { error: error.message };
-    } else if (error && typeof error === "object" && "message" in error) {
-      return { error: error.message };
-    } else if (error && typeof error === "string") {
-      return { error };
-    }
+  const FORM_ENDPOINT = process.env.FORMSPREE_ENDPOINT;
 
-    return { error: "Unknown error" };
+  const response = await fetch(FORM_ENDPOINT!, {
+    method: "POST",
+    body: formData,
+  });
+
+  if (!response.ok) {
+    console.error("Failed to send message: ", await response.text());
+    return { error: "Failed to send message" };
   }
-};
+}
