@@ -40,5 +40,9 @@
     "title": "Meus projetos",
     "visit": "Visitar projeto",
     "Blog": "Este é meu blog pessoal onde escrevo sobre meus projetos, hobbies e outras coisas."
+  },
+  "Blog": {
+    "featured": "Postagem em destaque:",
+    "read": "Leia mais"
   }
 }

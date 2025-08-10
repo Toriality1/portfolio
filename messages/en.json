@@ -33,6 +33,10 @@
     "visit": "Visit project",
     "source": "Source code"
   },
+  "Blog": {
+    "featured": "Featured blog post:",
+    "read": "Read more"
+  },
   "Contact": {
     "title": "Get in touch",
     "email": "Enter your email",
