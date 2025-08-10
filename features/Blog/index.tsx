@@ -9,7 +9,23 @@ const mockedData = `
 Hello world
 `;
 
-export default function Blog() {
+async function getFeaturedPost() {
+    const post = await fetch(process.env.BLOG_URL! + "/api/featured", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+
+    if (!post.ok) {
+      return mockedData
+    }
+
+    return await post.json()
+
+}
+
+export default async function Blog() {
   const headingComponents = Object.fromEntries(
     Array.from({ length: 6 }, (_, i) => {
       const tag = `h${i + 1}`;
@@ -21,15 +37,17 @@ export default function Blog() {
     }),
   );
 
+  const post = await getFeaturedPost()
+
   return (
     <Section id="Blog" color="bg-black" className="space-y-16 text-white">
       <SectionHeader>Blog</SectionHeader>
-      <div>
+      <div className='mx-auto w-fit' >
         <h4 className="title text-2xl uppercase opacity-50">
           Featured blog post:
         </h4>
         <article className="prose prose-invert">
-          <Markdown components={headingComponents}>{mockedData}</Markdown>
+          <Markdown components={headingComponents}>{post.content}</Markdown>
         </article>
       </div>
     </Section>
