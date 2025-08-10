@@ -8,7 +8,11 @@ export const nav_data = [
     hash: "#projects",
   },
   {
+    name: "Blog",
+    hash: "#blog",
+  },
+  {
     name: "Contact",
     hash: "#contact",
-  },
+  }
 ] as const;

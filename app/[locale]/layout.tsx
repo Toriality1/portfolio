@@ -61,6 +61,7 @@ export default function RootLayout({
             names={{
               About: t("About"),
               Projects: t("Projects"),
+              Blog: t("Blog"),
               Contact: t("Contact"),
             }}
           />
