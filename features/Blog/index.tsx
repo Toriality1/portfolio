@@ -6,25 +6,24 @@ import { createElement } from "react";
 import { FiExternalLink } from "react-icons/fi";
 import Markdown from "react-markdown";
 
-const mockedData = `
-# Test Title
-
-Hello world
-`;
-
 async function getFeaturedPost() {
-  const post = await fetch(process.env.BLOG_URL! + "/api/featured", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  try {
+    const post = await fetch(process.env.BLOG_URL! + "/api/featured", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-  if (!post.ok) {
-    return mockedData;
+    if (!post.ok) {
+      return null;
+    }
+
+    return await post.json();
+  } catch (e) {
+    console.error(e);
+    return null;
   }
-
-  return await post.json();
 }
 
 export default async function Blog() {
@@ -43,16 +42,22 @@ export default async function Blog() {
 
   const post = await getFeaturedPost();
 
+  if (!post) {
+    return null;
+  }
+
   return (
     <Section id="Blog" color="bg-black" className="space-y-16 text-white">
       <SectionHeader>Blog</SectionHeader>
       <div className="mx-auto w-fit">
-        <h4 className="title text-2xl uppercase opacity-50">
-        {t("featured")}
-        </h4>
+        <h4 className="title text-2xl uppercase opacity-50">{t("featured")}</h4>
         <div className="relative h-[80vh] overflow-hidden">
-          <div className="absolute bottom-0 flex h-1/2 w-full justify-end bg-gradient-to-t from-black from-10% to-transparent pointer-events-none">
-            <Link target="_blank" href={process.env.BLOG_URL! + "/posts/" + post.slug} className="pointer-events-auto group m-auto mb-10 w-fit translate-y-10 border-2 border-neutral-600/50 p-1 transition hover:border-neutral-800/50 disabled:pointer-events-none disabled:opacity-70">
+          <div className="pointer-events-none absolute bottom-0 flex h-1/2 w-full justify-end bg-gradient-to-t from-black from-10% to-transparent">
+            <Link
+              target="_blank"
+              href={process.env.BLOG_URL! + "/posts/" + post.slug}
+              className="group pointer-events-auto m-auto mb-10 w-fit translate-y-10 border-2 border-neutral-600/50 p-1 transition hover:border-neutral-800/50 disabled:pointer-events-none disabled:opacity-70"
+            >
               <p className="title flex items-center gap-2 bg-neutral-600 px-4 py-2 text-lg font-bold uppercase tracking-wide text-white transition group-hover:bg-neutral-800">
                 <span className="-translate-y-0.5">
                   <FiExternalLink />
