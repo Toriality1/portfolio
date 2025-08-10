@@ -51,8 +51,8 @@ export default async function Blog() {
         {t("featured")}
         </h4>
         <div className="relative h-[80vh] overflow-hidden">
-          <div className="absolute bottom-0 flex h-1/2 w-full justify-end bg-gradient-to-t from-black from-10% to-transparent">
-            <Link target="_blank" href={process.env.BLOG_URL! + "/posts/" + post.slug} className="group m-auto mb-10 w-fit translate-y-10 border-2 border-neutral-600/50 p-1 transition hover:border-neutral-800/50 disabled:pointer-events-none disabled:opacity-70">
+          <div className="absolute bottom-0 flex h-1/2 w-full justify-end bg-gradient-to-t from-black from-10% to-transparent pointer-events-none">
+            <Link target="_blank" href={process.env.BLOG_URL! + "/posts/" + post.slug} className="pointer-events-auto group m-auto mb-10 w-fit translate-y-10 border-2 border-neutral-600/50 p-1 transition hover:border-neutral-800/50 disabled:pointer-events-none disabled:opacity-70">
               <p className="title flex items-center gap-2 bg-neutral-600 px-4 py-2 text-lg font-bold uppercase tracking-wide text-white transition group-hover:bg-neutral-800">
                 <span className="-translate-y-0.5">
                   <FiExternalLink />
