@@ -19,7 +19,7 @@ const websites_data = [
   },
   {
     title: "DYOM Bingo",
-    href: "https://dyombingo.com",
+    href: "https://toriality.github.io/DYOM-Bingo/",
     source: "https://github.com/toriality/dyombingo",
     image: "/dyombingo.png",
   },
