@@ -35,6 +35,18 @@ const websites_data = [
     source: "https://toriality-blog.vercel.app",
     image: "/blog.png",
   },
+  {
+    title: "Sonhos de Quintal",
+    href: "https://sonhosdequintal.vercel.app/",
+    source: "https://github.com/toriality1/sonhosdequintal",
+    image: "/sonhosdequintal.png",
+  },
+  {
+    title: "Lann Studios",
+    href: "https://lannstudios.vercel.app/",
+    source: "https://github.com/toriality1/lann-studios",
+    image: "/lannstudios.png",
+  },
 ];
 
 const softwares_data = [
