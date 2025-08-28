@@ -7,7 +7,7 @@ export const SocialIcons = () => {
     <div className="flex gap-8 text-2xl text-button-link md:gap-4 md:text-xl">
       <Tooltip text="Github">
         <Link
-          href={"https://github.com/toriality"}
+          href={"https://github.com/toriality1"}
           target="_blank"
           className="hover:text-white"
         >
