@@ -25,7 +25,7 @@ const websites_data = [
   },
   {
     title: "nIRC",
-    href: "https://nirc.vercel.app/",
+    href: "https://nirc.onrender.com/",
     source: "https://github.com/toriality/nirc",
     image: "/nirc.png",
   },
