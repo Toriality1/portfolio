@@ -13,6 +13,12 @@ import {
   SiTailwindcss,
   SiAdobephotoshop,
   SiFigma,
+  SiPostgresql,
+  SiPrisma,
+  SiPhp,
+  SiLaravel,
+  SiGimp,
+  SiWordpress,
 } from "react-icons/si";
 
 const front_data = [
@@ -36,6 +42,10 @@ const front_data = [
     name: "Tailwind",
     icon: <SiTailwindcss />,
   },
+  {
+    name: "WordPress",
+    icon: <SiWordpress />,
+  },
 ];
 
 const databases_data = [
@@ -51,6 +61,14 @@ const databases_data = [
     name: "MySQL",
     icon: <SiMysql />,
   },
+  {
+    name: "PostgreSQL",
+    icon: <SiPostgresql />,
+  },
+  {
+    name: "Prisma ORM",
+    icon: <SiPrisma />,
+  },
 ];
 
 const back_data = [
@@ -62,12 +80,24 @@ const back_data = [
     name: "Express.js",
     icon: <SiExpress />,
   },
+  {
+    name: "PHP",
+    icon: <SiPhp />,
+  },
+  {
+    name: "Laravel",
+    icon: <SiLaravel />,
+  },
 ];
 
 const design_data = [
   {
     name: "Photoshop",
     icon: <SiAdobephotoshop />,
+  },
+  {
+    name: "GIMP",
+    icon: <SiGimp />,
   },
   {
     name: "Figma",
