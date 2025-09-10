@@ -1,6 +1,6 @@
 # Toriality's Portfolio
 
-![Portfolio Screenshot]()
+![Portfolio Screenshot](https://github.com/user-attachments/assets/6cbab55e-712e-4e29-863b-065bca820c32)
 
 _A modern, responsive portfolio showcasing my work and skills_
 
