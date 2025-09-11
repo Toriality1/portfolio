@@ -2,7 +2,7 @@ const websites_data = [
   {
     title: "Chronotune",
     href: "https://chronotune.vercel.app/",
-    source: "https://github.com/toriality/chronotune",
+    source: "https://github.com/toriality1/chronotune",
     image: "/chronotune.png",
   },
   {
@@ -14,25 +14,25 @@ const websites_data = [
   {
     title: "EmojiGuesser",
     href: "https://emojiguesser.vercel.app/",
-    source: "https://github.com/toriality/emojiguesser",
+    source: "https://github.com/toriality1/emojiguesser",
     image: "/emojiguesser.png",
   },
   {
     title: "HexGuesser",
     href: "https://hexguesser.vercel.app/",
-    source: "https://github.com/toriality/hexguesser",
+    source: "https://github.com/toriality1/hexguesser",
     image: "/hexguesser.png",
   },
   {
     title: "DYOM Bingo",
     href: "https://toriality.github.io/DYOM-Bingo/",
-    source: "https://github.com/toriality/dyombingo",
+    source: "https://github.com/toriality/DYOM-Bingo",
     image: "/dyombingo.png",
   },
   {
     title: "nIRC",
     href: "https://nirc.onrender.com/",
-    source: "https://github.com/toriality/nirc",
+    source: "https://github.com/toriality1/nirc",
     image: "/nirc.png",
   },
   {
