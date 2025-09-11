@@ -6,6 +6,12 @@ const websites_data = [
     image: "/chronotune.png",
   },
   {
+    title: "ScratchBook",
+    href: "https://thescratchbook.vercel.app/",
+    source: "https://github.com/toriality1/scratchbook",
+    image: "/scratchbook.png",
+  },
+  {
     title: "EmojiGuesser",
     href: "https://emojiguesser.vercel.app/",
     source: "https://github.com/toriality/emojiguesser",

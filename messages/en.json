@@ -22,6 +22,7 @@
   "Projects": {
     "title": "My Projects",
     "Chronotune": "Chronotune is a fun and addicting web game where you have to guess the release date of random songs from Spotify's database",
+    "ScratchBook": "A simple note-taking web application. Write public and private notes and share them with the world.",
     "EmojiGuesser": "EmojiGuesser is a simple cool game where you are tasked with guessing the name of an emoji or which emoji represents a certain word.",
     "HexGuesser": "HexGuesser is a simple and silly fun game where you are tasked with guessing the hex code of endlessly generated random colors.",
     "DYOM Bingo": "DYOM Bingo is a bingo game made for DYOM, a mod for GTA San Andreas.",
