@@ -25,8 +25,24 @@ const title_font = title_font_name({
 });
 
 export const metadata: Metadata = {
-  title: "Pedro Crelier | Software Engineer",
-  description: "💜 Be the change you want to see in the world 💚",
+  title: "Pedro Crelier | Portfolio",
+  description:
+    "Software Engineer with 5+ years of experience in web technologies.",
+  openGraph: {
+    title: "Pedro Crelier | Portfolio",
+    description:
+      "Software Engineer with 5+ years of experience in web technologies.",
+    siteName: "Pedro Crelier | Portfolio",
+    url: "https://toriality.vercel.app",
+    images: [
+      {
+        url: "/logo.png",
+        width: 256,
+        height: 256,
+      },
+    ],
+    type: "website",
+  },
 };
 
 async function getData() {
